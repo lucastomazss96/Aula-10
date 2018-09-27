@@ -18,7 +18,7 @@ previsao1 <- forecast(AR1, 4)                            #Cria o objeto previsao
 previsao1                                                #Exibe o objeto previsao1
 previstoAR1 <- previsao1$fitted
 modelo1 <- data.frame(previstoAR1,Inflacao)
-modelo1 <- ts(modelo1,start = 2008-01, frequency = 12) 
+modelo1 <- ts(modelo1,start = 2008, frequency = 12) 
 plot(modelo1, main="Previsto e Observado - AR1", 
      plot.type="single",
      ylab="Inflação",
@@ -29,7 +29,7 @@ previsao2 <- forecast(AR2, 4)
 previsao2
 previstoAR2 <- previsao2$fitted
 modelo2 <- data.frame(previstoAR2,Inflacao)
-modelo2 <- ts(modelo2,start = 2008-01, frequency = 12) 
+modelo2 <- ts(modelo2,start = 2008, frequency = 12) 
 plot(modelo2, main="Previsto e Observado AR2", 
      plot.type="single",
      ylab="Inflação", 
